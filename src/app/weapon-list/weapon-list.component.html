@@ -1,0 +1,17 @@
+<h3>Weapon List</h3>
+
+<div>
+    <button [routerLink]="['weapon-add']">Add Aircraft</button>
+</div>
+
+<div *ngIf="weapon.length > 0">
+    <div *ngFor="let weapon of Weapons">
+        {{weapon.image}}  -  {{weapon.model}}  -  {{weapon.name}} <br>
+        <button (click)="deleteWeapon(weapon)">DELETE</button>
+        <button [routerLink]="['/weapon-edit', weapon.model]">EDIT</button>
+    </div>
+</div>
+
+<div *ngIf="weapon.length == 0">
+    There are no weapons in the library.
+</div>

@@ -1,0 +1,17 @@
+<h3>Vehicle List</h3>
+
+<div>
+    <button [routerLink]="['vehicle-add']">Add Vehicle</button>
+</div>
+
+<div *ngIf="vehicle.length > 0">
+    <div *ngFor="let vehicle of Vehicles">
+        {{vehicle.image}}  -  {{vehicle.model}}  -  {{vehicle.name}} <br>
+        <button (click) ="deleteVehicle(vehicle)">DELETE</button>
+        <button [routerLink]="['/vehicle-edit', vehicle.model]">EDIT</button>
+    </div>
+</div>
+
+<div *ngIf="vehicle.length == 0">
+    There are no vehicles in the library.
+</div>

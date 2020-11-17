@@ -1,0 +1,17 @@
+<h3>Aircraft List</h3>
+
+<div>
+    <button [routerLink]="['aircraft-add']">Add Aircraft</button>
+</div>
+
+<div *ngIf="aircraft.length > 0">
+    <div *ngFor="let aircraft of Aircrafts">
+        {{aircraft.image}}  -  {{aircraft.model}}  -  {{aircraft.name}} <br>
+        <button (click) ="deleteAircraft(aircraft)">DELETE</button>
+        <button [routerLink]="['/aircraft-edit', aircraft.model]">EDIT</button>
+    </div>
+</div>
+
+<div *ngIf="aircraft.length == 0">
+    There are no aircraft in the library.
+</div>

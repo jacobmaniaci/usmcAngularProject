@@ -1,0 +1,24 @@
+<h4>Update Aircraft</h4>
+
+<div *ngIf="aircraft != undefined">
+    <div>
+        <input type="text" [(ngModel)]="aircraft.model" placeholder="Model">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="aircraft.name" placeholder="Name">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="aircraft.type" placeholder="Type">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="aircraft.image" placeholder="Image">
+    </div>
+    
+    <div>
+        <button (click)="saveAircraft()">SAVE</button>
+    </div>
+    
+</div>

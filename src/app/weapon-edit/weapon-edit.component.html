@@ -1,0 +1,23 @@
+<h4>Update Weapon</h4>
+
+<div *ngIf="weapon != undefined">
+    <div>
+        <input type="text" [(ngModel)]="weapon.model" placeholder="Model">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="weapon.name" placeholder="Name">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="weapon.type" placeholder="Type">
+    </div>
+    
+    <div>
+        <input type="text" [(ngModel)]="weapon.image" placeholder="Image">
+    </div>
+    
+    <div>
+        <button (click)="saveWeapon()">SAVE</button>
+    </div>
+</div>
